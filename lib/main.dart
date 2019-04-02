@@ -62,7 +62,18 @@ class Home extends StatelessWidget {
               Icon(Icons.change_history, size: 128.0, color: Colors.black12),
               Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
             ]
-            )
+            ),
+          drawer: Container(
+            color: Colors.white,
+            padding: EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text('This is drawer')
+              ],
+            ),
+          ), // 设置左侧抽屉
+          endDrawer: Text('This is a right drawer'), //设置右边的抽屉
         )
     );
   }

@@ -9,7 +9,11 @@ class App extends StatelessWidget {
     return MaterialApp(
 //      debugShowCheckedModeBanner: false, //去掉debug标签
         home: Home(),
-        theme: ThemeData(primaryColor: Colors.yellow) // app顶部bar颜色
+        theme: ThemeData(
+            primaryColor: Colors.yellow,
+          highlightColor: Color.fromRGBO(255, 255, 255, 0.5), // tab按下去的背景色,整个主题的按下去背景色
+          splashColor: Colors.white70 // 长按下tab水波纹效果颜色
+        ) // app顶部bar颜色
     );
   }
 }
@@ -42,7 +46,12 @@ class Home extends StatelessWidget {
               //右侧按钮
               elevation: 30.0,
               //appbar 阴影 默认4.0
-              bottom: TabBar(tabs: <Widget>[
+              bottom: TabBar(
+                unselectedLabelColor: Colors.black38, //Tab未选中的颜色
+                indicatorColor: Colors.black54, //tab 选中时下划线颜色
+                  indicatorSize: TabBarIndicatorSize.label, //下划线长度
+                  indicatorWeight: 1.0,
+                  tabs: <Widget>[
                 Tab(icon: Icon(Icons.local_florist)),
                 Tab(icon: Icon(Icons.change_history)),
                 Tab(icon: Icon(Icons.directions_bike))

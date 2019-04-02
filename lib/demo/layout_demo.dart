@@ -20,6 +20,7 @@ class LayoutDemo extends StatelessWidget {
         SizedBox(child: Container(
           width: 200.0,
           height: 300.0,
+          alignment: Alignment(0.6, -0.8), // 对齐
           decoration: BoxDecoration(
             color: Color.fromRGBO(3, 54, 255, 1.0),
             borderRadius: BorderRadius.circular(8.0),

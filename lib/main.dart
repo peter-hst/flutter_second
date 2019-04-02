@@ -27,11 +27,6 @@ class Home extends StatelessWidget {
         child: Scaffold(
             backgroundColor: Colors.grey[100],
             appBar: AppBar(
-              leading: IconButton( //appbar 左边的按钮
-                  icon: Icon(Icons.menu),
-                  tooltip: 'Navigration',
-                  onPressed: () =>
-                      debugPrint('Navigration button is pressed.')),
               title: Text('B标题'),
               actions: <Widget>[
                 IconButton( //appbar
@@ -65,28 +60,32 @@ class Home extends StatelessWidget {
             ),
           drawer: Container(
             color: Colors.white,
-            padding: EdgeInsets.all(8.0),
+//            padding: EdgeInsets.all(8.0),
             child: Drawer(
               child: ListView(
                 padding: EdgeInsets.zero,
                 children: <Widget>[
-                  DrawerHeader(
-                    child: Text('header'.toUpperCase()),
-                    decoration:BoxDecoration(
-                      color:Colors.grey[100]
-                    ) ,
+                  UserAccountsDrawerHeader(
+                    accountName: Text('Peter',style: TextStyle(fontWeight: FontWeight.bold)),
+                    accountEmail: Text('peter.hauang@163.com'),
+                    currentAccountPicture: CircleAvatar(
+                      backgroundImage: NetworkImage('http://img.qqzhi.com/uploads/2019-02-15/144652303.jpg'),
+                    ),
                   ),
                   ListTile(
                     title:Text('Messages',textAlign: TextAlign.right),
                     trailing: Icon(Icons.message,color:Colors.black12,size:22.0), //后面显示图标 leading: 是前面显示图标
+                    onTap: () => Navigator.pop(context),
                   ),
                   ListTile(
                     title:Text('Favorite',textAlign: TextAlign.right),
                     trailing: Icon(Icons.favorite,color:Colors.black12,size:22.0), //后面显示图标 leading: 是前面显示图标
+                    onTap: () => Navigator.pop(context),
                   ),
                   ListTile(
                     title:Text('Settings',textAlign: TextAlign.right),
                     trailing: Icon(Icons.settings,color:Colors.black12,size:22.0), //后面显示图标 leading: 是前面显示图标
+                    onTap: () => Navigator.pop(context),
                   )
                 ],
               ),

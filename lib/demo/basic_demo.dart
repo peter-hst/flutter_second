@@ -8,17 +8,74 @@ class BasicDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.grey[100],
+//        color: Colors.grey[100],
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage('https://resources.ninghao.org/images/say-hello-to-barry.jpg'),
+          alignment: Alignment.topCenter,
+//            repeat: ImageRepeat.repeatY
+          fit:BoxFit.cover,  // cover 保持图片比例填充整个容器
+            colorFilter: ColorFilter.mode(Colors.indigoAccent[400].withOpacity(0.5), BlendMode.hardLight)
+          ),
+        ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-                child: Icon(Icons.pool, size: 32.0, color: Colors.white),
-                color: Color.fromRGBO(3, 54, 255, 1.0),
+              child: Icon(Icons.pool, size: 32.0, color: Colors.white),
+//                color: Color.fromRGBO(3, 54, 255, 1.0),
 //                padding: EdgeInsets.only(left: 24.0,right: 8.0)),
-                padding: EdgeInsets.all(16.0),
+              padding: EdgeInsets.all(16.0),
               margin: EdgeInsets.all(8.0),
               width: 90.0,
               height: 90.0,
+              decoration: BoxDecoration(
+                  color: Color.fromRGBO(3, 54, 255, 1.0),
+/*                  borderRadius:
+                      BorderRadius.only(
+                          topLeft: Radius.circular(64.0),
+                          bottomLeft: Radius.circular(64.0)),*/
+                  boxShadow: [
+                    BoxShadow(
+                        offset: Offset(0.0, 16.0),
+                        color: Color.fromRGBO(16, 20, 188, 1.0),
+                      blurRadius: 25.0,
+                      spreadRadius: -9.0 //负数缩小阴影,正数扩大阴影
+                    )
+                  ],
+                  shape: BoxShape.circle, //定义盒子的形状,rectangle矩形, circle圆形 注意圆形不能设置圆角 否则会冲突
+                  /*gradient: RadialGradient(colors: [
+                    Color.fromRGBO(7, 102, 255, 1.0),
+                    Color.fromRGBO(3, 28, 128, 1.0),
+                  ]) ,*/
+                  gradient: LinearGradient(colors: [ //线性渐变
+                    Color.fromRGBO(7, 102, 255, 1.0),
+                    Color.fromRGBO(3, 28, 128, 1.0),
+                  ],
+                  begin: Alignment.topCenter,
+                    end:Alignment.bottomCenter
+                  ) ,
+//                  borderRadius: BorderRadius.circular(16.0), //给border增加圆角
+                  border: Border.all(
+                    //所有边框设置相同
+                    color: Colors.indigoAccent[100],
+                    width: 3.0,
+                    style: BorderStyle.solid,
+                  )
+//                给border的每个边增加样式
+                  /* border:Border(
+                    top: BorderSide(
+                      color: Colors.indigoAccent[100],
+                      width:3.0,
+                      style: BorderStyle.solid
+                    ),
+                  bottom: BorderSide(
+                      color: Colors.indigoAccent[100],
+                      width:3.0,
+                      style: BorderStyle.solid
+                  )
+                )*/
+                  ),
             ),
           ],
         ));

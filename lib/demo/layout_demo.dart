@@ -10,13 +10,34 @@ class LayoutDemo extends StatelessWidget {
     );*/
     return Container(
       child: Column(  //Row横着排,Column竖着排
-      crossAxisAlignment: CrossAxisAlignment.stretch,
+//      crossAxisAlignment: CrossAxisAlignment.stretch,
 //        主轴, Row的主轴是横向的,Column的主轴是纵向的
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly, //spaceEvenly表示平均分
+        mainAxisAlignment: MainAxisAlignment.center, //spaceEvenly表示平均分
         children: <Widget>[
-          IconBadge(Icons.pool),
-          IconBadge(Icons.beach_access,size:64.0),
-          IconBadge(Icons.airplanemode_active)
+//          IconBadge(Icons.pool),
+//          IconBadge(Icons.beach_access,size:64.0),
+//          IconBadge(Icons.airplanemode_active)
+        SizedBox(child: Container(
+          width: 200.0,
+          height: 300.0,
+          decoration: BoxDecoration(
+            color: Color.fromRGBO(3, 54, 255, 1.0),
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          child: Icon(Icons.ac_unit,color: Colors.white,size:32.0),
+        )),
+        SizedBox(
+          height:32.0
+        ),
+        SizedBox(child: Container(
+          width: 100.0,
+          height: 100.0,
+          decoration: BoxDecoration(
+            color: Color.fromRGBO(3, 54, 255, 1.0),
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          child: Icon(Icons.brightness_2,color: Colors.white,size:32.0),
+        ))
         ],
       ),
     );

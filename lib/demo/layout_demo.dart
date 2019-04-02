@@ -19,9 +19,13 @@ class LayoutDemo extends StatelessWidget {
 //          IconBadge(Icons.beach_access,size:64.0),
 //          IconBadge(Icons.airplanemode_active)
 //          StackDemo()
-          AspectRatio(
+/*          AspectRatio(
               aspectRatio: 16.0 / 9.0, //设置宽高比例这样就得到 16:9 长:宽的容器
-              child: Container(color: Color.fromRGBO(3, 54, 255, 1.0)))
+              child: Container(color: Color.fromRGBO(3, 54, 255, 1.0)))*/
+          ConstrainedBox( //带限制宽高的盒子容器
+            constraints: BoxConstraints(minHeight: 200.0,maxWidth: 200.0),
+            child: Container(color: Color.fromRGBO(3, 54, 255, 1.0)),
+          )
         ],
       ),
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'demo/listview_demo.dart';
+import 'package:flutter_second/demo/drawer_demo.dart';
 
 void main() => runApp(App());
 
@@ -61,35 +61,7 @@ class Home extends StatelessWidget {
           drawer: Container(
             color: Colors.white,
 //            padding: EdgeInsets.all(8.0),
-            child: Drawer(
-              child: ListView(
-                padding: EdgeInsets.zero,
-                children: <Widget>[
-                  UserAccountsDrawerHeader(
-                    accountName: Text('Peter',style: TextStyle(fontWeight: FontWeight.bold)),
-                    accountEmail: Text('peter.hauang@163.com'),
-                    currentAccountPicture: CircleAvatar(
-                      backgroundImage: NetworkImage('http://img.qqzhi.com/uploads/2019-02-15/144652303.jpg'),
-                    ),
-                  ),
-                  ListTile(
-                    title:Text('Messages',textAlign: TextAlign.right),
-                    trailing: Icon(Icons.message,color:Colors.black12,size:22.0), //后面显示图标 leading: 是前面显示图标
-                    onTap: () => Navigator.pop(context),
-                  ),
-                  ListTile(
-                    title:Text('Favorite',textAlign: TextAlign.right),
-                    trailing: Icon(Icons.favorite,color:Colors.black12,size:22.0), //后面显示图标 leading: 是前面显示图标
-                    onTap: () => Navigator.pop(context),
-                  ),
-                  ListTile(
-                    title:Text('Settings',textAlign: TextAlign.right),
-                    trailing: Icon(Icons.settings,color:Colors.black12,size:22.0), //后面显示图标 leading: 是前面显示图标
-                    onTap: () => Navigator.pop(context),
-                  )
-                ],
-              ),
-            ),
+            child: DrawerDemo(),
           ), // 设置左侧抽屉
           endDrawer: Text('This is a right drawer'), //设置右边的抽屉
         )

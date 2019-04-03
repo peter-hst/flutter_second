@@ -1,12 +1,208 @@
 import 'package:flutter/material.dart';
 import '../model/post.dart';
+
 class ViewDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ViewDemoBuilderDemo();
+//    return ViewDemoBuilderDemo();
+    return GridView.count(
+      crossAxisCount: 3,
+      crossAxisSpacing: 16.0,
+      mainAxisSpacing: 16.0,
+      children: <Widget>[
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+      ],
+    );
   }
-
 }
+
 class ViewDemoBuilderDemo extends StatelessWidget {
   Widget _pageItemBuilder(BuildContext context, int index) {
     return Stack(
@@ -23,15 +219,9 @@ class ViewDemoBuilderDemo extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(
-                posts[index].title,
-                style: TextStyle(
-                    fontWeight: FontWeight.bold
-                )
-              ),
-              Text(
-                posts[index].author
-              )
+              Text(posts[index].title,
+                  style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(posts[index].author)
             ],
           ),
         )
@@ -45,7 +235,6 @@ class ViewDemoBuilderDemo extends StatelessWidget {
         itemCount: posts.length, itemBuilder: _pageItemBuilder);
   }
 }
-
 
 class PageViewDemo extends StatelessWidget {
   @override

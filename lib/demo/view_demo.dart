@@ -2,9 +2,36 @@ import 'package:flutter/material.dart';
 import '../model/post.dart';
 
 class ViewDemo extends StatelessWidget {
+  List<Widget> _builderTiles(int length) {
+    return List.generate(
+        length,
+        (int index) => Container(
+              color: Colors.grey[300],
+              alignment: Alignment(0.0, 0.0),
+              child: Text(
+                'Item $index',
+                style: TextStyle(fontSize: 18.0, color: Colors.grey),
+              ),
+            ));
+  }
+
   @override
   Widget build(BuildContext context) {
 //    return ViewDemoBuilderDemo();
+//    return GridViewDemo();
+    return GridView.count(
+      scrollDirection: Axis.horizontal,
+      crossAxisCount: 3,
+      crossAxisSpacing: 16.0,
+      mainAxisSpacing: 16.0,
+      children: _builderTiles(100),
+    );
+  }
+}
+
+class GridViewDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 3,
       crossAxisSpacing: 16.0,
@@ -81,20 +108,6 @@ class ViewDemo extends StatelessWidget {
             'item',
             style: TextStyle(fontSize: 18.0, color: Colors.grey),
           ),
-        ),Container(
-          color: Colors.grey[300],
-          alignment: Alignment(0.0, 0.0),
-          child: Text(
-            'item',
-            style: TextStyle(fontSize: 18.0, color: Colors.grey),
-          ),
-        ),Container(
-          color: Colors.grey[300],
-          alignment: Alignment(0.0, 0.0),
-          child: Text(
-            'item',
-            style: TextStyle(fontSize: 18.0, color: Colors.grey),
-          ),
         ),
         Container(
           color: Colors.grey[300],
@@ -175,14 +188,32 @@ class ViewDemo extends StatelessWidget {
             'item',
             style: TextStyle(fontSize: 18.0, color: Colors.grey),
           ),
-        ),Container(
+        ),
+        Container(
           color: Colors.grey[300],
           alignment: Alignment(0.0, 0.0),
           child: Text(
             'item',
             style: TextStyle(fontSize: 18.0, color: Colors.grey),
           ),
-        ),Container(
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'item',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        ),
+        Container(
           color: Colors.grey[300],
           alignment: Alignment(0.0, 0.0),
           child: Text(

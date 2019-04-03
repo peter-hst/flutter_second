@@ -4,6 +4,7 @@ import 'package:flutter_second/demo/bottom_navigation_bar_demo.dart';
 import 'package:flutter_second/demo/drawer_demo.dart';
 import 'package:flutter_second/demo/layout_demo.dart';
 import 'package:flutter_second/demo/listview_demo.dart';
+import 'package:flutter_second/demo/navigator_demo.dart';
 import 'package:flutter_second/demo/sliver_demo.dart';
 import 'package:flutter_second/demo/view_demo.dart';
 
@@ -14,7 +15,13 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 //      debugShowCheckedModeBanner: false, //去掉debug标签
-        home: Home(),
+//        home: Home(),
+//        home: NavigatorDemo(), // home 本身自带了 默认路由 '/'
+        initialRoute: '/', // 初始化的路由路径
+        routes: {
+          '/': (context) => NavigatorDemo(),
+          '/about': (context) => Page(title: 'About')
+        },
 //        home: SliverDemo(),
         theme: ThemeData(
             primaryColor: Colors.yellow, //主颜色

@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import '../model/post.dart';
-
 class ViewDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ViewDemoCount();
+  }
+
+}
+class ViewDemoCount extends StatelessWidget {
   List<Widget> _builderTiles(int length) {
     return List.generate(
         length,
@@ -14,7 +20,6 @@ class ViewDemo extends StatelessWidget {
               ),
             ));
   }
-
   @override
   Widget build(BuildContext context) {
 //    return ViewDemoBuilderDemo();

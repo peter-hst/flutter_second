@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import '../model/post.dart';
-
 class ViewDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ViewDemoBuilderDemo();
+  }
+
+}
+class ViewDemoBuilderDemo extends StatelessWidget {
   Widget _pageItemBuilder(BuildContext context, int index) {
     return Stack(
       children: <Widget>[
@@ -39,6 +45,7 @@ class ViewDemo extends StatelessWidget {
         itemCount: posts.length, itemBuilder: _pageItemBuilder);
   }
 }
+
 
 class PageViewDemo extends StatelessWidget {
   @override

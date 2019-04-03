@@ -4,6 +4,7 @@ import 'package:flutter_second/demo/bottom_navigation_bar_demo.dart';
 import 'package:flutter_second/demo/drawer_demo.dart';
 import 'package:flutter_second/demo/layout_demo.dart';
 import 'package:flutter_second/demo/listview_demo.dart';
+import 'package:flutter_second/demo/sliver_demo.dart';
 import 'package:flutter_second/demo/view_demo.dart';
 
 void main() => runApp(App());
@@ -13,7 +14,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 //      debugShowCheckedModeBanner: false, //去掉debug标签
-        home: Home(),
+//        home: Home(),
+        home: SliverDemo(),
         theme: ThemeData(
             primaryColor: Colors.yellow, //主颜色
             highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -60,7 +62,8 @@ class Home extends StatelessWidget {
                   Tab(icon: Icon(Icons.local_florist)),
                   Tab(icon: Icon(Icons.change_history)),
                   Tab(icon: Icon(Icons.directions_bike)),
-                  Tab(icon: Icon(Icons.view_quilt))
+                  Tab(icon: Icon(Icons.view_quilt)),
+//                  Tab(icon: Icon(Icons.view_agenda)),
                 ]),
           ),
           body: TabBarView(children: <Widget>[
@@ -70,7 +73,8 @@ class Home extends StatelessWidget {
             BasicDemo(),
 //            Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
             LayoutDemo(),
-            ViewDemo()
+            ViewDemo(),
+//            SliverDemo(),
           ]),
           drawer: Container(
             color: Colors.white,

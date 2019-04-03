@@ -10,9 +10,19 @@ class SliverDemo extends StatelessWidget {
         slivers: <Widget>[
           SliverAppBar(
             // 给Sliver上面增加AppBar,当Sliver滚动的时候 它会渐渐消失,有个渐变消失的效果
-            title: Text('HUANG'),
 //            pinned: true, //控制AppBar是否为固定的,true表示固定, 滚动的时候上面会出现阴影效果
-            floating: true,
+            floating: true, // 设置appbar是否为浮动的
+            expandedHeight: 178.0, // 设置伸展的高度
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text(
+                'Flutter nihao'.toUpperCase(),
+                style: TextStyle(
+                    fontSize: 15.0,
+                    letterSpacing: 3.0,
+                    fontWeight: FontWeight.w400),
+              ),
+              background: Image.network('https://resources.ninghao.org/images/overkill.png',fit:BoxFit.cover),
+            ),
           ),
           SliverSafeArea(
             // SlaverSafeArea 是顶部超出屏幕部分,保证内容不出屏幕,在安全区域内显示

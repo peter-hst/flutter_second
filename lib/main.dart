@@ -14,8 +14,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 //      debugShowCheckedModeBanner: false, //去掉debug标签
-//        home: Home(),
-        home: SliverDemo(),
+        home: Home(),
+//        home: SliverDemo(),
         theme: ThemeData(
             primaryColor: Colors.yellow, //主颜色
             highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -72,7 +72,8 @@ class Home extends StatelessWidget {
 //            Icon(Icons.change_history, size: 128.0, color: Colors.black12),
             BasicDemo(),
 //            Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
-            LayoutDemo(),
+//            LayoutDemo(),
+            SliverDemo(),
             ViewDemo(),
 //            SliverDemo(),
           ]),

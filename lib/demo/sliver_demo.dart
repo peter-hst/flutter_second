@@ -14,15 +14,16 @@ class SliverDemo extends StatelessWidget {
             floating: true, // 设置appbar是否为浮动的
             expandedHeight: 178.0, // 设置伸展的高度
             flexibleSpace: FlexibleSpaceBar(
-              title: Text(
-                'Flutter nihao'.toUpperCase(),
-                style: TextStyle(
-                    fontSize: 15.0,
-                    letterSpacing: 3.0,
-                    fontWeight: FontWeight.w400),
-              ),
-              background: Image.network('https://resources.ninghao.org/images/overkill.png',fit:BoxFit.cover),
-            ),
+                title: Text(
+                  'Flutter nihao'.toUpperCase(),
+                  style: TextStyle(
+                      fontSize: 15.0,
+                      letterSpacing: 3.0,
+                      fontWeight: FontWeight.w400),
+                ),
+                background: Image.network(
+                    'https://resources.ninghao.org/images/overkill.png',
+                    fit: BoxFit.cover)),
           ),
           SliverSafeArea(
             // SlaverSafeArea 是顶部超出屏幕部分,保证内容不出屏幕,在安全区域内显示
